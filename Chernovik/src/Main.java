@@ -1,39 +1,36 @@
-import java.util.Scanner;
-
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
-        String maxName = null;
-        Scanner scan = new Scanner(System.in);
-        while (true) {
-            // Выводим информацию о возможных операциях пользователю
-            System.out.println("Vvedite imya s bolshoi bykvy ili najmite end: ");
-            String input = scan.nextLine();
-            if ("end".equals(input)) {
-                System.out.println("Programma zavershena!");
-                break;
+        int[][] field = new int[5][5];
+        int[][] agents = {{1, 4}, {0, 1}, {4, 2}, {4, 3}, {4, 3}, {0, 1}, {0, 2}, {4, 3}};
+        int[] agentX = new int[2]; //неизвестные координаты агента
+
+        for (int[] cell : agents) {
+            agentX = cell; //получены координаты агента
+            int x = agentX[0];
+            int y = agentX[1];
+            if (field[x][y] == 0) {   //заглянуть в ячейку поля с извлеч.координатами
+                field[x][y] += 1;     //и если там 0, то записать 1
+            } else {
+                field[x][y] *= 2;   //а если не 0, то умножить на 2
             }
-            char symbol = input.charAt(0);
-            if (Character.isLowerCase(symbol)) {
-                System.out.println("Vy napisali imya ne s bolshoi bykvy: ");
-                continue;
-            }
-            if (maxName == null) {
-                System.out.println("Eto pervoe vvedennoe imya!");
-                maxName = input;
-            } else if (input.length() < maxName.length()) {
-                System.out.println("Samoe dlinnoe vvedennoe imya: " + maxName);
-                int raznisa = maxName.length() - input.length();
-                System.out.println("Vashe imya koroche na " + raznisa + " simvolov");
-            } else if (input.length() > maxName.length()) {
-                maxName = input;
-                System.out.println("Teper vashe imya samoe dlinnoe! " + maxName);
-            }
+            //System.out.println(Arrays.deepToString(field)); // прогресс заражения
         }
+        //System.out.println(Arrays.deepToString(field)); //ниже план второго метода для вывода результатов
+
+       for (int i = 0; i < field.length; i++) {  //цикл для красивого вывода итоговой таблицы
+           for (int j = 0; j < field[i].length; j++) {
+               System.out.print(field[i][j] + "\t");
+           }
+           System.out.println();
+       }
+
+
+
+
+
     }
 }
-
-
-
 
 
 
