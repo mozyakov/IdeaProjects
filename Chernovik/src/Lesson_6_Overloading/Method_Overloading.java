@@ -2,11 +2,11 @@ package Lesson_6_Overloading;
 
 public class Method_Overloading { //overloading позволяет называть похожие методы одним именем
     void show(int i1) {           //какой именно метод использовать будет решать то, что указано в параметрах
-        System.out.println(i1);   //по аналогии с конструторами класса
+        System.out.println(i1);   //по аналогии с конструкторами класса
         System.out.println("Data type is Int");
     }
     void show(int a, int b) {    //какой именно метод использовать будет решать то, что указано в параметрах
-        System.out.println(a);   //по аналогии с конструторами класса
+        System.out.println(a);   //по аналогии с конструкторами класса
         System.out.println("Data type is Int");
     }
     void show(boolean b1) {

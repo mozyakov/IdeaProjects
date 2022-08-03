@@ -1,6 +1,12 @@
 package Lesson_6_Overloading;
 
 public class Employee {
+    int id;          //блок с параметрами класса
+    String surname;
+    int age;
+    double salary;
+    String department;
+    
     Employee(int id2, String surname2, int age2) { //конструктор с тремя значениями по умолчанию
         this(id2, surname2, age2, 0.0, null);
     }
@@ -17,11 +23,7 @@ public class Employee {
         String department = department4;
     }
 
-    int id;          //блок с параметрами класса
-    String surname;
-    int age;
-    double salary;
-    String department;
+
 }
 
 class EmployeeTest {
