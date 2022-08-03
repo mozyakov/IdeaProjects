@@ -9,14 +9,22 @@ public class Student {
     double economicAverage;
     double averageForeignLang;
 
-    Student(int studentId1, String name1, String lastName1, int course1, double mathAverage1, double economicAverage1, double averageForeignLang1) {
-       studentId = studentId1; //первый конструктор самый подробный, но при использовании для создания объекта будет мало писанины
+    Student(int studentId, String name, String lastName, int course, double mathAverage, double economicAverage, double averageForeignLang) {
+        this.studentId = studentId; //первый конструктор самый подробный, но при использовании для создания объекта будет мало писанины
+        this.name = name;           //всё через параметры, без объявления переменных
+        this.lastName = lastName;
+        this.course = course;
+        this.mathAverage = mathAverage;
+        this.economicAverage = economicAverage;
+        this.averageForeignLang = averageForeignLang;
+        /*studentId = studentId1; //первый конструктор самый подробный, но при использовании для создания объекта будет мало писанины
         name = name1;           //всё через параметры, без объявления переменных
         lastName = lastName1;
         course = course1;
         mathAverage = mathAverage1;
         economicAverage = economicAverage1;
         averageForeignLang = averageForeignLang1;
+         */
     }
 
     Student(int studentId2, String name2, String lastName2, int course2) { //конструктор с тремя параметрами, остальные через объявления переменных
