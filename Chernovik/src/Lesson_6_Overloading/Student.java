@@ -27,9 +27,11 @@ public class Student {
          */
     }
 
-    Student(int studentId2, String name2, String lastName2, int course2) { //конструктор с тремя параметрами, остальные через объявления переменных
+    /*Student(int studentId2, String name2, String lastName2, int course2) { //конструктор с тремя параметрами, остальные через объявления переменных
         this(studentId2, name2, lastName2, course2, 0, 0, 0);
     }
+    
+     */
 
     Student() { //третий конструктор пустой, при его использовании будет много писанины при создании объекта
                 //потребуется объявлять все переменные и значения
