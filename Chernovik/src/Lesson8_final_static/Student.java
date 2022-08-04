@@ -20,22 +20,29 @@ public class Student {
     public void showInfo() {
         System.out.println("Welcome to the Student class");
     }
-    void abc() { //не static метод может изменять и не статические переменные ниже
-        a++;     //
-        count++; //и статические
+    void abc() { //nonstatic метод может изменять
+        a++;     //nonstatic переменные
+        count++; //и static переменные
     }
-    //static void abcd() { //static метод не может использовать не статические переменные,
+    //static void abcd() { //static метод не может использовать nonstatic переменные,
     //    a++;             //потому что им необходим объект
-    //}
-}
 
-class StudentTest {
+    static void abcd() {
+        Student st2 = new Student("Petr", 1);
+        st2.a++; //вот можно использовать nonstatic переменную внутри st2 объекта класса Student;
+    }
+
+
     public static void main(String[] args) {
         Student st1 = new Student("Ivan", 1);
         Student st2 = new Student("Petr", 4);
         Student st3 = new Student("Masha", 2);
         System.out.println(Student.count); //указываем имя класса, count принадлежит именно классу
         Student.showCount();
+        abcd(); //метод можно вызвать без создания объекта
+
+        Student st4 = new Student("Ivan", 4); //создан объект
+        st4.abc(); //nonstatic метод нельзя вызвать без создания объекта, но если объект создан то можно с ним.
 
     }
 }
