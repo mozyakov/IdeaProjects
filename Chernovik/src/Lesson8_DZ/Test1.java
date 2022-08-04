@@ -3,24 +3,24 @@ package Lesson8_DZ;
 public class Test1 {
     String name;
     double rad;
-    Test1 (String name, double rad) {
+    Test1 (String name, double rad) { //конструктор класса с двумя параметрами
         this.name = name;
         this.rad = rad;
     }
     static final double p = 3.14;
 
-    double areaCurcle(double rad) {
+    double areaCurcle(double rad) { //метод возвращающий площадь круга
         double area = p * rad * rad;
         return area;
     }
 
-    static double dlinaCurcle(double rad) {
+    static double dlinaCurcle(double rad) { //метод возвращающий длину окружности
         double dlina = 2 * p * rad;
         return dlina;
     }
 
-    void showInfo(double rad) {
-        System.out.println("Если у круга радиус="+rad + " Площадь круга=" + areaCurcle(rad) + " Длина окружности=" + dlinaCurcle(rad));
+    void showInfo(double rad) { //выводит инфу о радиусе, площади круга и длине окружности
+        System.out.println("Если у круга радиус="+rad + ", то площадь круга=" + areaCurcle(rad) + ", длина окружности=" + dlinaCurcle(rad));
     }
 }
 
