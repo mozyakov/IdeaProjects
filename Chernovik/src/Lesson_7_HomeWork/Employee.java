@@ -1,12 +1,24 @@
-package Lesson_6_Overloading;
+package Lesson_7_HomeWork;
 
 public class Employee {
     int id;          //блок с параметрами класса
-    String surname;
+    public String surname;
     int age;
-    double salary;
+    private double salary;
     String department;
-    
+
+    public void pokazId() {
+        System.out.println("Показываю default id = " + id);
+    }
+
+    public void pokazString() {
+        System.out.println("Показываю public surname = " + surname);
+    }
+
+    public void polazSalary() {
+        System.out.println("Показываю private salary = " + salary);
+    }
+
     Employee(int id2, String surname2, int age2) { //конструктор с тремя значениями по умолчанию
         this(id2, surname2, age2, 0.0, null);
     }
