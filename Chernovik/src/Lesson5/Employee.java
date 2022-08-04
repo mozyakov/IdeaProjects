@@ -1,4 +1,4 @@
-package Lesson_05;
+package Lesson5;
 
 public class Employee { //создан класс
     int id;          //блок с параметрами класса

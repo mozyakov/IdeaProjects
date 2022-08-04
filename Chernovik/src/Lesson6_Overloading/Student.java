@@ -1,4 +1,4 @@
-package Lesson_6_Overloading;
+package Lesson6_Overloading;
 
 public class Student {
     int studentId; //блок параметров класса

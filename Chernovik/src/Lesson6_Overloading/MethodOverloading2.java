@@ -1,4 +1,4 @@
-package Lesson_6_Overloading;
+package Lesson6_Overloading;
 
 public class MethodOverloading2 {
     int sum(int i1, int i2) {

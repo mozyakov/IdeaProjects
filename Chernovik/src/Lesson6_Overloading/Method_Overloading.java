@@ -1,4 +1,4 @@
-package Lesson_6_Overloading;
+package Lesson6_Overloading;
 
 public class Method_Overloading { //overloading позволяет называть похожие методы одним именем
     void show(int i1) {           //какой именно метод использовать будет решать то, что указано в параметрах

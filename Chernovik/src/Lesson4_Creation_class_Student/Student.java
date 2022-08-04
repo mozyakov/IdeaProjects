@@ -1,4 +1,4 @@
-package Lesson_04_Creation_class_Student;
+package Lesson4_Creation_class_Student;
 
 public class Student {
     int studentId;

@@ -1,4 +1,4 @@
-package Lesson_6_Overloading;
+package Lesson6_Overloading;
 
 public class Test1 {
         int sum (int a, int b, int c) {

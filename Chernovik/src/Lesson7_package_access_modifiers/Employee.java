@@ -1,4 +1,4 @@
-package Lesson_7_package_access_modifiers;
+package Lesson7_package_access_modifiers;
 
 public class Employee {
     public double salary;

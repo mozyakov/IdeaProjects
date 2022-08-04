@@ -1,4 +1,4 @@
-package Lesson_7_HomeWork;
+package Lesson7_HomeWork;
 
 public class Employee {
     int id;          //блок с параметрами класса
