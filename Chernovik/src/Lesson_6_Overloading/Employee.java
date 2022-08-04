@@ -7,20 +7,23 @@ public class Employee {
     double salary;
     String department;
     
-    Employee(int id2, String surname2, int age2) { //конструктор с тремя значениями по умолчанию
-        this(id2, surname2, age2, 0.0, null);
+    Employee(int id, String surname, int age) { //конструктор с указанием трёх значений
+        this.id = id;
+        this.surname = surname;
+        this.age = age;
     }
 
-    public Employee (String surname3, int age3) { //ещё конструктор но с другими параметрами
-        this(0, surname3, age3, 0.0, null);
+    public Employee (String surname, int age) { //ещё конструктор, но с другими параметрами
+        this.surname = surname;
+        this.age = age;
     }
 
-    Employee(int id4, String surname4, int age4, double salary4, String department4) { //ещё конструктор
-        int id = id4;
-        String surname = surname4;
-        int age = age4;
-        double salary = salary4;
-        String department = department4;
+    Employee(int id, String surname, int age, double salary, String department) { //конструктор с указанием всех параметров
+        this.id = id;
+        this.surname = surname;
+        this.age = age;
+        this.salary = salary;
+        this.department = department;
     }
 
 
@@ -29,9 +32,9 @@ public class Employee {
 class EmployeeTest {
     public static void main(String[] args) {    // создаем объекты класса с разными параметрами
         Employee emp1 = new Employee(1, "Ivanov", 25);
-        System.out.println(emp1.surname);
+        System.out.println(emp1.department);
         Employee emp2 = new Employee("Petrov", 20);
-        System.out.println(emp2.surname);
+        System.out.println(emp2.salary);
         Employee emp3 = new Employee(2, "Sidorov", 40, 100.35, "IT");
         System.out.println(emp3.department);
     }
