@@ -1,7 +1,7 @@
 package accounts;
 
 public class Account {
-    public String name;
+    String name;
     public long balance;
 
     public Account (String name, long balance) {
