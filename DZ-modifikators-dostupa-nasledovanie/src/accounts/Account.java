@@ -1,15 +1,13 @@
 package accounts;
 
 public class Account {
-    String name;
-    long balance;
+    public String name;
+    public long balance;
 
     public Account (String name, long balance) {
         this.name = name;
         this.balance = balance;
     }
-
-
 
 
     long pay(long a) {
