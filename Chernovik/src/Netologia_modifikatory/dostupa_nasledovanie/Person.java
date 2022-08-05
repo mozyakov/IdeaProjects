@@ -35,12 +35,12 @@ public class Person {
         return age;
     }
 
-    public String isTooYoung () {
+    public boolean isTooYoung () {
         if (age < 18) {
-            return "Ещё нет 18 лет";
-            //return true;
+            //System.out.println("Ещё нет 18 лет");
+            return true;
         } else {
-            return "Cовершеннолетний";
+            return false;
         }
     }
 }
