@@ -1,9 +1,7 @@
 package accounts;
 
 public class SavingsAccount  extends Account { //накопительный счет
-    public String name;
-    public long balance;
-    public long minBalance = 1000;
+    public long minBalance;
 
     public SavingsAccount( String name, long balance, long minBalance) {
         super(name, balance);
@@ -11,20 +9,22 @@ public class SavingsAccount  extends Account { //накопительный сч
     }
 
     @Override
+    public long add(long b) {
+        return balance += b;
+    }
+
+    @Override
     public long pay(long a) {
-        if (balance >= 1000) {
+        if ((balance - a) >= minBalance ) {
             balance -= a;
             return balance;
         } else{
-            System.out.println("Минимальный баланс достиг критического уровня");
+            System.out.println("Баланс не может быть меньше минимума - в операции отказано");
         }
         return minBalance;
     }
 
-    @Override
-    long add(long b) {
-        return balance += b;
-    }
+
 
 
 }
