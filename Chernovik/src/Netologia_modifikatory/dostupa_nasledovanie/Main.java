@@ -1,4 +1,4 @@
-package Netologia.incapsul;
+package Netologia_modifikatory.dostupa_nasledovanie;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,7 +14,6 @@ public class Main {
         System.out.println(person.getAge()); // через getter возраста узнаем возраст
         System.out.println(person.isTooYoung());
         person.happyBurthday();
-        System.out.println(person.toString());
 
         Singer singer = new Singer("Tanya", 15, 4);
         singer.happyBurthday();

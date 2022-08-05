@@ -1,9 +1,8 @@
-package Netologia.incapsul;
+package Netologia_modifikatory.dostupa_nasledovanie;
 
 public class Person {
     protected String name;
     protected int age; //private ограничиваем доступ
-
 
     Person () {}; // конструктор класса без параметров
 
@@ -11,7 +10,6 @@ public class Person {
         this.name = name;
         this.age = age;
     }
-
 
     public void happyBurthday() {
         age++;
@@ -37,12 +35,12 @@ public class Person {
         return age;
     }
 
-    public boolean isTooYoung () {
+    public String isTooYoung () {
         if (age < 18) {
-            //System.out.println("Вам еще нет 18 лет");
-            return true;
+            return "Ещё нет 18 лет";
+            //return true;
         } else {
-            return false;
+            return "Cовершеннолетний";
         }
     }
 }
