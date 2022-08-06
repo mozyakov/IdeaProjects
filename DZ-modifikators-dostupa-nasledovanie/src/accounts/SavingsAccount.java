@@ -1,15 +1,21 @@
 package accounts;
 
 public class SavingsAccount extends Account { //накопительный счет
-    public long minBalance;
+    protected long minBalance = 1_000;
+    public SavingsAccount() {}
 
-    public SavingsAccount(String name, long balance, long minBalance) {
+    SavingsAccount(String name, long balance, long minBalance) {
         super(name, balance); //наследуем параметры родителя
         this.minBalance = minBalance;
     }
 
+public void setName(String name) {this.name = name;}
+    public void setBalanse(long balance) {this.balance = balance;}
+    public  long getBalanse() {return balance;}
+
+
   @Override
-    public long add(long amount) {
+        public long add(long amount) {
         long oldBalance = balance;
         balance += amount;
         //boolean result = (oldBalance < balance);
@@ -17,14 +23,6 @@ public class SavingsAccount extends Account { //накопительный сч�
         return balance;
         //System.out.println((oldBalance < balance));
     }
-    /*
-        @Override
-    public void add(long amount) {
-        long oldBalance = balance;
-        balance += amount;
-        System.out.println((oldBalance < balance));
-    }
-     */
 
     @Override
     public long pay(long amount) {
@@ -38,16 +36,4 @@ public class SavingsAccount extends Account { //накопительный сч�
             return balance;
         }
     }
-    /*
-        @Override
-    public void pay(long amount) {
-        long oldBalance = balance;
-        if ((balance - amount) >= minBalance) {
-            balance -= amount;
-            System.out.println((oldBalance > balance)); //снятие прошло, поэтому true
-        } else {
-            System.out.println((oldBalance != balance)); //снятие не прошло, пишу неверное чтоб показать false
-        }
-    }
-     */
 }

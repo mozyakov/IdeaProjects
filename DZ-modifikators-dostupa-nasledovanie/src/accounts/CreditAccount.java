@@ -1,12 +1,17 @@
 package accounts;
 
 public class CreditAccount extends Account { //кредитный счет
-    public long balance;
+    protected long balance = 0;
+    public CreditAccount() {}
 
     public CreditAccount(String name, long balance) {
         super(name, balance); //наследуем параметры родителя
         this.balance = balance - balance; //обнуляем баланс при создании
     }
+    public void setName(String name) {this.name = name;}
+    public void setBalanse(long balance) {this.balance = balance;}
+    public  long getBalanse() {return balance;}
+    //public long getBalance() { return 0;}
 
     @Override
     public long add(long amount) {
@@ -40,6 +45,8 @@ public class CreditAccount extends Account { //кредитный счет
         System.out.println(balanceBefore > balance); //всегда покажет true
         return balance;
     }
+
+
     /*
         @Override
     public void pay(long amount) {

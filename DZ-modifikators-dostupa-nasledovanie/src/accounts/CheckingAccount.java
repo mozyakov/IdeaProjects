@@ -1,11 +1,16 @@
 package accounts;
 
 public class CheckingAccount extends Account { //расчётный счет
-    public long minBalance = 0;
+    protected long minBalance = 0;
+    public CheckingAccount() {}
 
-    public CheckingAccount(String name, long balance) {
+    CheckingAccount(String name, long balance) {
         super(name, balance); //наследуем параметры родителя
     }
+
+    public void setName(String name) {this.name = name;}
+    public void setBalanse(long balance) {this.balance = balance;}
+    public  long getBalanse() {return balance;}
 
     @Override
     public long add(long amount) {

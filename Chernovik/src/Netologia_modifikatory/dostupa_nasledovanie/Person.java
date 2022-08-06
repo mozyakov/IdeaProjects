@@ -4,7 +4,7 @@ public class Person {
     protected String name;
     protected int age; //private ограничиваем доступ
 
-    Person () {}; // конструктор класса без параметров
+    Person () {} // конструктор класса без параметров
 
     Person (String name, int age) { //конструктор класса
         this.name = name;
@@ -16,9 +16,7 @@ public class Person {
         System.out.println("С днем рождения!");
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) {this.name = name;}
 
     public String getName() {
         return name;
