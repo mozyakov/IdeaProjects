@@ -1,20 +1,21 @@
 package accounts;
 
 public class CreditAccount extends Account { //кредитный счет
+    public long balance;
 
     public CreditAccount(String name, long balance) {
-        super(name, balance = 0); //принудительно баланс 0, если при создании прописать другое, баланс всё равно будет 0
+        super(name, balance); //наследуем параметры родителя
+        this.balance = balance - balance; //обнуляем баланс при создании
     }
 
     @Override
     public void add(long amount) {
         if ((balance + amount) <= 0) {
             balance += amount;
-            System.out.println((balance <= 0)); //пополнение true, баланс не ушёл в плюс
+            System.out.println((balance <= 0)); //пополнение true, баланс всё равно отрицательный
 
         } else {
-            System.out.println("Не выполнено");
-            System.out.println((balance > 0)); //пополнение false, пишу так чтоб получить false
+            System.out.println((balance > 0)); //пополнение false, пишу заведомо неверное чтоб получить false
         }
     }
 

@@ -1,4 +1,3 @@
-import accounts.Account;
 import accounts.CheckingAccount;
 import accounts.CreditAccount;
 import accounts.SavingsAccount;
@@ -20,13 +19,13 @@ public class Main {
 
         System.out.println("==========блок завершен==================");
 
-        CreditAccount credAcc = new CreditAccount("Кредитников", 10_000); //проверяем что конструктор всё равно поставит 0
-        System.out.println(credAcc.balance); //изначально баланс всегда 0, показываю что конструктор не дал поставить не ноль
+        CreditAccount credAcc = new CreditAccount("Кредитников", 20_000); //мой конструктор при создании обнуляет баланс!!!
+        System.out.println(credAcc.balance); //изначально баланс всегда 0, показываю что конструктор не дал поставить положительное значение
         credAcc.pay(50_000); //true, на этом счете снятие всегда будет true, потому что не боюсь минус
-        System.out.println(credAcc.balance);
+        System.out.println(credAcc.balance); //показ текущего баланса кредитного счета
         credAcc.add(40_000); //пополнение true, потому что баланс всё равно в минусе
-        System.out.println(credAcc.balance);
+        System.out.println(credAcc.balance); //показ текущего баланса кредитного счета
         credAcc.add(20_000); //пополнение false, иначе баланс станет положительным
-        System.out.println(credAcc.balance);
+        System.out.println(credAcc.balance); //показ текущего баланса кредитного счета
     }
 }

@@ -4,7 +4,7 @@ public class SavingsAccount extends Account { //накопительный сч�
     public long minBalance;
 
     public SavingsAccount(String name, long balance, long minBalance) {
-        super(name, balance);
+        super(name, balance); //наследуем параметры родителя
         this.minBalance = minBalance;
     }
 
