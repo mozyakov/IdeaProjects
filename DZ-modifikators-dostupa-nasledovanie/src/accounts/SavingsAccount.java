@@ -8,9 +8,17 @@ public class SavingsAccount  extends Account { //накопительный сч
         this.minBalance = minBalance;
     }
 
+    //@Override
+    //public  add(long b) {
+        //return balance += b;
+    //}
+
     @Override
-    public long add(long b) {
-        return balance += b;
+    public void add(long b) {
+        long balanceDo = balance;
+        balance += b;
+        boolean boo = (balanceDo < balance);
+        System.out.println(boo);
     }
 
     @Override

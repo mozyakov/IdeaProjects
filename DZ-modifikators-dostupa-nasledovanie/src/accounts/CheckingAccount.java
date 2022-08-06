@@ -8,13 +8,13 @@ public class CheckingAccount extends Account{ //расчётный счет
         //this.minBalance = minBalance;
     }
 
-    @Override
-    public long add(long b) {
-        return balance += b;
-    }
+   // @Override
+    //public long add(long b) {
+     //   return balance += b;
+    //}
 
-    @Override
-    public long pay(long a) {
+    //@Override
+   /* public long pay(long a) {
         if (balance >= a) {
             balance -= a;
             return balance;
@@ -23,6 +23,9 @@ public class CheckingAccount extends Account{ //расчётный счет
         }
         return balance;
     }
+    */
+
+
 
 
 

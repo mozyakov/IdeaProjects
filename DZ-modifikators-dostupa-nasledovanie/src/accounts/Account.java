@@ -10,12 +10,16 @@ public class Account {
     }
 
 
-    long pay(long a) {
-        return balance -= a;
+    public void add(long b) {
+            balance += b;
+            boolean boo = (balance > balance+b);
+            //return true;
     }
 
-    long add(long b) {
-        return balance += b;
+
+    public long pay(long a) {
+        balance -= a;
+        return balance;
     }
 
     public String getName() {
