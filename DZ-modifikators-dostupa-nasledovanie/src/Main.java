@@ -1,33 +1,27 @@
 import accounts.Account;
 import accounts.CheckingAccount;
+import accounts.CreditAccount;
 import accounts.SavingsAccount;
 
 public class Main {
     public static void main(String[] args) {
         /*
-        SavingsAccount saveAcc = new SavingsAccount("Ivanov", 10_000, 1_000);
-        System.out.println("баланс счета saveAcc = " + saveAcc.balance);
+        SavingsAccount saveAcc = new SavingsAccount("накопительный счет", 10_000, 1_000);
         saveAcc.pay(5_000); //снятие
         saveAcc.pay(5_000); //false снятие не пройдет - нельзя опускать ниже мин.баланса
-        System.out.println("баланс счета saveAcc = " + saveAcc.balance);
         saveAcc.add(10_000);   //пополнение будет true
-        System.out.println("баланс счета saveAcc = " + saveAcc.balance);
-
-        System.out.println("====================");
         */
 
-
+        /*
         CheckingAccount checkAcc = new CheckingAccount("расчетный счет", 10_000);
 
-        //System.out.println("баланс счета checkAcc = " + checkAcc.balance); //показ счета
-        //checkAcc.add(20_000);   //пополнение готово
-        checkAcc.pay(11_000); //снятие
-        System.out.println("баланс счета checkAcc = " + checkAcc.balance); //показ счета
-       // checkAcc.pay(9_000); //снятие превышает баланс - будет отказ
+        checkAcc.pay(10_000); //снятие успешно
+        checkAcc.pay(10_000); //снятие не пройдет, в минус уходить нельзя
+        checkAcc.add(20_000);   //пополнение успешно
+         */
 
-       // System.out.println("баланс счета checkAcc = " + checkAcc.balance); //показ счета
+        CreditAccount credAcc = new CreditAccount("кредитный счет", 10_000);
 
-        //System.out.println("====================");
 
 
     }
