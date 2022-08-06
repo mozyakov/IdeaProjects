@@ -9,6 +9,19 @@ public class CreditAccount extends Account { //кредитный счет
     }
 
     @Override
+    public long add(long amount) {
+        if ((balance + amount) <= 0) {
+            balance += amount;
+            System.out.println(balance <= 0); //пополнение true, баланс всё равно отрицательный
+            return balance;
+
+        } else {
+            System.out.println(balance > 0); //пополнение false, пишу заведомо неверное чтоб получить false
+            return balance;
+        }
+    }
+    /*
+        @Override
     public void add(long amount) {
         if ((balance + amount) <= 0) {
             balance += amount;
@@ -18,13 +31,23 @@ public class CreditAccount extends Account { //кредитный счет
             System.out.println((balance > 0)); //пополнение false, пишу заведомо неверное чтоб получить false
         }
     }
+     */
 
     @Override
+    public long pay(long amount) {
+        long balanceBefore = balance;
+        balance -= amount;
+        System.out.println(balanceBefore > balance); //всегда покажет true
+        return balance;
+    }
+    /*
+        @Override
     public void pay(long amount) {
         long balanceBefore = balance;
         balance -= amount;
         System.out.println(balanceBefore > balance); //всегда покажет true
     }
+     */
 }
 
 
