@@ -10,16 +10,23 @@ public class Account {
     }
 
 
-    public void add(long b) {
-            balance += b;
-            boolean boo = (balance > balance+b);
-            //return true;
+    public void add(long amount) {
+        long balanceBefore = balance;
+        balance += amount;
+        boolean result = (balanceBefore < balance);
+        System.out.println(result);
     }
 
 
-    public long pay(long a) {
-        balance -= a;
-        return balance;
+    public void pay(long amount) {
+        long balanceBefore = balance;
+        //boolean result = (balanceBefore > balance);
+        if (balance >= amount) {
+            balance -= amount;
+            boolean result = (balanceBefore > balance);
+            System.out.println(result);
+        }
+
     }
 
     public String getName() {

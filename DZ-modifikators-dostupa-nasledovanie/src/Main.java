@@ -6,11 +6,11 @@ public class Main {
     public static void main(String[] args) {
 
         SavingsAccount saveAcc = new SavingsAccount("Ivanov", 10_000, 1_000);
-
-        //saveAcc.pay(5_000); //снятие
         System.out.println("баланс счета saveAcc = " + saveAcc.balance);
-        //saveAcc.pay(7_000); //снятие превышающее лимит - будет отказ
-        saveAcc.add(10_000);   //пополнение
+        saveAcc.pay(5_000); //снятие
+        saveAcc.pay(5_000); //false снятие не пройдет - нельзя опускать ниже мин.баланса
+        System.out.println("баланс счета saveAcc = " + saveAcc.balance);
+        saveAcc.add(10_000);   //пополнение будет true
         System.out.println("баланс счета saveAcc = " + saveAcc.balance);
 
         System.out.println("====================");
