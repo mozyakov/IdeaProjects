@@ -17,8 +17,7 @@ public class CreditAccount extends Account { //кредитный счет
             System.out.println((balance > 0)); //пополнение false, пишу так чтоб получить false
         }
     }
-}
-/*    свой метод pay здесь не нужен потому что родительский полностью такой же
+
     @Override
     public void pay(long amount) {
         long balanceBefore = balance;
@@ -26,6 +25,6 @@ public class CreditAccount extends Account { //кредитный счет
         System.out.println(balanceBefore > balance); //всегда покажет true
     }
 }
-*/
+
 
 
