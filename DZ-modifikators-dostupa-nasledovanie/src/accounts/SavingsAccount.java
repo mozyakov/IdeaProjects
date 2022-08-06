@@ -1,6 +1,6 @@
 package accounts;
 
-public class SavingsAccount  extends Account { //накопительный счет
+public class SavingsAccount extends Account { //накопительный счет
     public long minBalance;
 
     public SavingsAccount(String name, long balance, long minBalance) {
@@ -12,7 +12,6 @@ public class SavingsAccount  extends Account { //накопительный сч
     //public  add(long b) {
     //return balance += b;
     //}
-
     @Override
     public void add(long amount) {
         long balanceDo = balance;
@@ -36,12 +35,14 @@ public class SavingsAccount  extends Account { //накопительный сч
         long balanceBefore = balance;
         if ((balance - amount) >= minBalance) {
             balance -= amount;
-            boolean result = (balanceBefore > balance); //снятие прошло, значит баланс до и сейчас не равны поэтому true
-            System.out.println(result);
-            } else{
+            System.out.println((balanceBefore > balance)); //снятие прошло, значит баланс до и сейчас не равны поэтому true
+            //boolean result = (balanceBefore > balance); //снятие прошло, значит баланс до и сейчас не равны поэтому true
+            //System.out.println(result);
+        } else {
             System.out.println("Баланс не может быть меньше минимума - в операции отказано");
-            boolean result = (balanceBefore > balance); //снятие не прошло, баланс до и сейчас равны, но нужен false поэтому пишем от обратного
-            System.out.println(result);
+            System.out.println((balanceBefore > balance)); //снятие не прошло, баланс до и сейчас равны, но нужен false поэтому пишем от обратного
+            //boolean result = (balanceBefore > balance); //снятие не прошло, баланс до и сейчас равны, но нужен false поэтому пишем от обратного
+            //System.out.println(result);
         }
     }
 }
