@@ -4,7 +4,7 @@ import accounts.SavingsAccount;
 
 public class Main {
     public static void main(String[] args) {
-/*
+
         SavingsAccount saveAcc = new SavingsAccount();//
         saveAcc.setName("Сохранников");
         saveAcc.setBalanse(10_000);
@@ -24,21 +24,13 @@ public class Main {
         checkAcc.add(20_000);   //пополнение true
 
         System.out.println("==========блок завершен==================");
-*/
+
         CreditAccount credAcc = new CreditAccount(); //мой конструктор при создании обнуляет баланс!!!
         credAcc.setName("Кредитников");
-        //credAcc.setBalanse(20_000); //мой конструктор при создании обнуляет баланс!!!
-        //System.out.println(credAcc.getBalance());
-        //credAcc.getBalance();
-        //System.out.println(credAcc.balance); //изначально баланс всегда 0, показываю что конструктор не дал поставить положительное значение
-        credAcc.pay(50_000); //снятие true, на этом счете снятие всегда будет true, потому что минус не страшен
-        //System.out.println(credAcc.balance); //показ текущего баланса кредитного счета
-        credAcc.add(40_000); //пополнение true, потому что баланс всё равно в минусе
-        //System.out.println(credAcc.balance); //показ текущего баланса кредитного счета
+        credAcc.setBalanse(200_000); //мой конструктор при создании всё равно обнулит баланс!!!
+        System.out.println(credAcc.getBalanse());
+        credAcc.pay(50_000); //снятие true, на этом счете снятие всегда будет true, минус не страшен
+        credAcc.add(40_000); //пополнение true, потому что баланс пока в минусе
         credAcc.add(20_000); //пополнение false, иначе баланс станет положительным
-        //System.out.println(credAcc.balance); //показ текущего баланса кредитного счета
-
-
-
     }
 }

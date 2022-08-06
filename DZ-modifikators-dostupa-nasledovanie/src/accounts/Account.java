@@ -4,7 +4,8 @@ class Account {
     protected String name;
     protected long balance;
 
-    Account () {}
+    Account() {
+    }
 
     Account(String name, long balance) {
         this.name = name;
