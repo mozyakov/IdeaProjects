@@ -8,22 +8,14 @@ public class Account {
         this.balance = balance;
     }
     public void add(long amount) {
-        long balanceBefore = balance;
+        long oldBalance = balance;
         balance += amount;
-        boolean result = (balanceBefore < balance);
-        System.out.println(result);
+        System.out.println((oldBalance < balance)); //true, при пополнении старый всегда меньше теперешнего
     }
-    public void pay(long amount) {
-        long balanceBefore = balance;
-        //boolean result = (balanceBefore > balance);
-        if (balance >= amount) {
-            balance -= amount;
-            boolean result = (balanceBefore > balance);
-            System.out.println(result);
-        }
 
+    public void pay(long amount) {
+        long oldBalance = balance;
+        balance -= amount;
+        System.out.println((oldBalance > balance)); //true, при снятии старый всегда больше теперешнего
     }
-    //public String getName() {
-        //return name;
-    //}
 }

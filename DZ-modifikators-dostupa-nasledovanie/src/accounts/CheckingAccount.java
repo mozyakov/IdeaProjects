@@ -1,4 +1,5 @@
 package accounts;
+
 public class CheckingAccount extends Account{ //расчётный счет
     public long minBalance = 0;
 
@@ -8,19 +9,19 @@ public class CheckingAccount extends Account{ //расчётный счет
 
    @Override
    public void add(long amount) {
-       long balanceDo = balance;
+       long oldBalance = balance;
        balance += amount;
-       System.out.println((balanceDo < balance));
+       System.out.println((oldBalance < balance));
    }
 
     @Override
     public void pay(long amount) {
-        long balanceBefore = balance;
+        long oldBalance = balance;
         if (amount <= balance) {
             balance -= amount;
-            System.out.println((balanceBefore > balance)); //снятие прошло, значит баланс до и сейчас не равны поэтому true
+            System.out.println((oldBalance > balance)); //снятие прошло, поэтому true
         } else {
-            System.out.println((balanceBefore > balance)); //снятие не прошло, баланс до и сейчас равны, но нужен false поэтому пишем от обратного
+            System.out.println((oldBalance != balance)); //снятие не прошло, баланс до и сейчас равны, но нужен false поэтому пишу от обратного
         }
     }
 }
