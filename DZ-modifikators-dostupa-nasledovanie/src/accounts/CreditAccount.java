@@ -13,7 +13,7 @@ public class CreditAccount extends Account {
     }
 
     /*public void setBalance(long balance) { //ещё вариант игнорирование не нулевого баланса
-        if (this.balance == 0) {
+        if (this.balance == 0) {             //но мой первый вариант понятнее и лаконичнее
             return;
         }
         this.balance = balance;
