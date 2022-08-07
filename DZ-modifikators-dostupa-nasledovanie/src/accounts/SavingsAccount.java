@@ -14,11 +14,11 @@ public class SavingsAccount extends Account { //накопительный сч�
         this.name = name;
     }
 
-    public void setBalanse(long balance) {
+    public void setBalance(long balance) {
         this.balance = balance;
     }
 
-    public long getBalanse() {
+    public long getBalance() {
         return balance;
     }
 

@@ -8,11 +8,19 @@ public class CreditAccount extends Account {
         this.name = name;
     }
 
-    public void setBalanse(long balance) {
+    public void setBalance(long balance) {
         this.balance = balance - balance; //обнуляем баланс при создании объекта
     }
 
-    public long getBalanse() {
+    /*public void setBalance(long balance) { //ещё вариант игнорирование не нулевого баланса
+        if (this.balance == 0) {
+            return;
+        }
+        this.balance = balance;
+    }
+     */
+
+    public long getBalance() {
         return balance;
     }
 
