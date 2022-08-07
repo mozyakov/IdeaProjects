@@ -9,7 +9,7 @@ public class CreditAccount extends Account {
     }
 
     public void setBalanse(long balance) {
-        this.balance -= balance - balance; //обнуляем баланс при создании
+        this.balance = balance - balance; //обнуляем баланс при создании
     }
 
     public long getBalanse() {
