@@ -1,6 +1,7 @@
 package HomeWork.Lesson10.p4;
 
-import HomeWork.Lesson10.p1.A;
+//import HomeWork.Lesson10.p1.A; //точечный импорт класса
+import HomeWork.Lesson10.p1.*;  //импорт сразу все классы из пакета p1
 import HomeWork.Lesson10.p1.p2.B;
 import HomeWork.Lesson10.p1.p2.p3.C;
 import HomeWork.Lesson10.p4.p5.*;
@@ -21,6 +22,12 @@ public class D {
 
         E e = new E();
         System.out.println(e.xyz);
+
+        F f2 = new F();
+        System.out.println(f2.f1);
+        f2.outPutFvoid();
+        f2.outputFnotvoid();
+
 
         System.out.println(b1);
         System.out.println(b2);
