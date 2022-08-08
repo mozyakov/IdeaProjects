@@ -1,8 +1,10 @@
 package Lesson7_package_access_modifiers;
 
+import HomeWork.Lesson7.Employee;
+
 public class ProverkaDZ {
     public static void main(String[] args) {
-        Lesson7_HomeWork.Employee emp1 = new Lesson7_HomeWork.Employee(01);
+        Employee emp1 = new Employee(01);
         //Lesson_7_HomeWork.Employee emp2 = new Lesson_7_HomeWork.Employee("Vtorov", 33);
         // не сработает, потому что у конструктора default access modifier работает только в родном пакете
 

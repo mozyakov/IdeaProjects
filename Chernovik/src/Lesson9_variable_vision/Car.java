@@ -1,9 +1,13 @@
 package Lesson9_variable_vision;
 
 public class Car {
+    final int XYZ = 3;
+    int zzzzzzzzzzzzzzssssssscc = 5;
+    int String = 2;
     String color; //это instance переменные (object переменные), видны везде в своём объекте
+    public static int ab = 10;
     String engine;
-    static  int count; //это static переменная, видна везде в своем классе
+    public static  int count; //это static переменная, видна везде в своем классе
 
     public Car(String color, String engine) {
         count++;

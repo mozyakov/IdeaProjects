@@ -1,4 +1,4 @@
-package Lesson8_DZ;
+package HomeWork.Lesson8;
 
 public class First {
     static int tripleMultiply(int a, int b, int c) {

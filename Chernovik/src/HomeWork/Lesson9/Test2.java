@@ -1,4 +1,4 @@
-package Lesson9_DZ;
+package HomeWork.Lesson9;
 
 public class Test2 {
     int a = 1;
