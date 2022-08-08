@@ -5,7 +5,7 @@ import accounts.SaveAcc;
 public class Main {
     public static void main(String[] args) {
 
-        SaveAcc saveAcc = new SaveAcc();//
+        SaveAcc saveAcc = new SaveAcc();
         saveAcc.setName("Сохранников");
         saveAcc.setBalance(10_000);
         System.out.println(saveAcc.getBalance());

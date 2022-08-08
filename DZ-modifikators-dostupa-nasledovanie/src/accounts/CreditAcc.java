@@ -9,7 +9,7 @@ public class CreditAcc extends Account {
 
     @Override
     public long add(long amount) {
-        if ((balance + amount) <= 0) {
+        if (balance + amount <= 0) {
             balance += amount;
             System.out.println(balance <= 0); //пополнение true, баланс всё равно отрицательный
             return balance;
