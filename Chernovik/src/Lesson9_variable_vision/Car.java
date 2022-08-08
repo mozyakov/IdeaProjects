@@ -5,7 +5,7 @@ public class Car {
     String engine;
     static  int count; //это static переменная, видна везде в своем классе
 
-    Car(String color, String engine) {
+    public Car(String color, String engine) {
         count++;
         this.color = color;
         this.engine = engine;

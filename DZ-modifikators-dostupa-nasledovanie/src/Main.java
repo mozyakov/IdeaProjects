@@ -1,6 +1,7 @@
-import accounts.CheckAcc;
-import accounts.CreditAcc;
-import accounts.SaveAcc;
+import accounts.*;   //импорт всех классов из пакета
+//import accounts.CheckAcc;
+//import accounts.CreditAcc;
+//import accounts.SaveAcc;
 
 public class Main {
     public static void main(String[] args) {
