@@ -23,8 +23,6 @@ public class D {
         System.out.println(e.xyz);
 
         System.out.println(b1);
-
-
-
+        System.out.println(b2);
     }
 }
