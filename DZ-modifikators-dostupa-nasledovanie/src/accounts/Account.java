@@ -12,15 +12,22 @@ class Account {
         this.balance = balance;
     }
 
-    long add(long amount) {
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setBalance(long balance) {
+        this.balance = balance;
+    }
+    public long getBalance() {
+        return balance;
+    }
+    public long add(long amount) {
         long oldBalance = balance;
         balance += amount;
         System.out.println(oldBalance < balance); //true, при пополнении старый всегда меньше теперешнего
         return balance;
-
     }
-
-    long pay(long amount) {
+    public long pay(long amount) {
         long oldBalance = balance;
         balance -= amount;
         System.out.println(oldBalance > balance); //true, при снятии старый всегда больше теперешнего
