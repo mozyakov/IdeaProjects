@@ -7,7 +7,7 @@ public class Car {
     String color; //это instance переменные (object переменные), видны везде в своём объекте
     public static int ab = 10;
     String engine;
-    public static  int count; //это static переменная, видна везде в своем классе
+    public static int count; //это static переменная, видна везде в своем классе
 
     public Car(String color, String engine) {
         count++;
@@ -18,7 +18,6 @@ public class Car {
     public String getColor() {
         return color;
     }
-
 
     void changeColor(String color) { //color это параметр, виден в своём методе
         System.out.println("Цвет машины изменился на");
@@ -33,7 +32,5 @@ public class Car {
         c.changeColor("black");
         System.out.println(c.color);
         System.out.println(c.getColor());
-
-
     }
 }
