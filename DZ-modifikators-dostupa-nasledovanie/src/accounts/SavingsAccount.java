@@ -14,7 +14,7 @@ public class SavingsAccount extends Account { //накопительный сч�
             balance -= amount;
             System.out.println(oldBalance > balance); //снятие прошло, поэтому true
         } else {
-            System.out.println(oldBalance != balance); //снятие не прошло, пишу так чтоб показать false
+            System.out.println(2 == 1); //снятие не прошло, пишу так чтоб показать false
         }
         return balance;
     }

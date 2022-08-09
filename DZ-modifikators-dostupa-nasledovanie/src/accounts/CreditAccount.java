@@ -14,7 +14,7 @@ public class CreditAccount extends Account {
             balance += amount;
             System.out.println(balance <= 0); //пополнение true, баланс всё равно отрицательный
         } else {
-            System.out.println(balance > 0); //пополнение false, пишу заведомо неверное чтоб получить false
+            System.out.println(2 == 1); //пополнение false, пишу неверно чтоб вернуть false
         }
         return balance;
     }
