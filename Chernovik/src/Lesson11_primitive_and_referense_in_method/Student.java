@@ -24,10 +24,10 @@ public class Student {
     public static void main(String[] args) {
         Student st1 = new Student("Ivan", 3, 9.5);
         Student st2 = new Student("Petr", 1, 5.3 );
-        swap(st1, st2);
-        System.out.println(st1.name);
+        swap(st1, st2); //изменения умрут сразу после этой строки
+        System.out.println(st1.name); //без изменений
         System.out.println(st2.name);
-        changeName(st2);
+        changeName(st2); //сработает, потому что меняем значение внутри объекта, а не сам объект
         System.out.println(st2.name);
 
     }
