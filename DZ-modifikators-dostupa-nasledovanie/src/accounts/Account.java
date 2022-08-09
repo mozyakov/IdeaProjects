@@ -11,6 +11,7 @@ class Account {
         this.name = name;
         this.balance = balance;
     }
+
     public void setParameters(String name, long balance) { //в одном методе несколько параметров
         this.name = name;
         this.balance = balance;

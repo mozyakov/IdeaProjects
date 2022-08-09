@@ -13,10 +13,9 @@ public class CheckingAccount extends Account { //расчётный счет
         if (amount <= balance) {
             balance -= amount;
             System.out.println(oldBalance > balance); //снятие прошло, поэтому true
-            return balance;
         } else {
             System.out.println(oldBalance != balance); //снятие не прошло, баланс до и сейчас равны, но нужен false поэтому пишу от обратного
-            return balance;
         }
+        return balance;
     }
 }

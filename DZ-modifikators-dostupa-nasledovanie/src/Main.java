@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         SavingsAccount saving = new SavingsAccount();
+        SavingsAccount saving2 = new SavingsAccount();
         saving.setParameters("Сохранников", 10_000); //в одном методе несколько параметров
-        saving.getBalance();
         saving.getMinBalance();
         saving.pay(5_000); //снятие true
         saving.pay(5_000); //снятие false, нельзя опускать ниже мин.баланса
@@ -15,7 +15,6 @@ public class Main {
 
         CheckingAccount check = new CheckingAccount();
         check.setParameters("Сохранников", 10_000);
-        check.getBalance();
         check.getMinBalance();
         check.pay(10_000); //снятие true
         check.pay(10_000); //снятие false, нельзя уходить в минус
