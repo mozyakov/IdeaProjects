@@ -11,6 +11,10 @@ class Account {
         this.name = name;
         this.balance = balance;
     }
+    public void setParameters(String name, long balance) { //в одном методе несколько параметров
+        this.name = name;
+        this.balance = balance;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -18,8 +22,11 @@ class Account {
     public void setBalance(long balance) {
         this.balance = balance;
     }
-    public long getBalance() {
-        return balance;
+    public void getBalance() {
+        System.out.println("Баланс счета: " + balance);
+    }
+    public void getName() {
+        System.out.println("имя счета: " + name);
     }
     public long add(long amount) {
         long oldBalance = balance;
@@ -33,5 +40,4 @@ class Account {
         System.out.println(oldBalance > balance); //true, при снятии старый всегда больше теперешнего
         return balance;
     }
-
 }

@@ -1,7 +1,11 @@
 package accounts;
 
-public class SaveAcc extends Account { //накопительный счет
+public class SavingsAccount extends Account { //накопительный счет
     protected long minBalance = 1_000;
+
+    public void getMinBalance() {
+        System.out.println("Мин.баланс SavingsAccount = " + minBalance);
+    }
 
     @Override
     public long pay(long amount) {

@@ -1,6 +1,12 @@
 package accounts;
 
-public class CreditAcc extends Account {
+public class CreditAccount extends Account {
+
+    @Override
+    public void setParameters(String name, long balance) { //в одном методе несколько параметров
+        this.name = name; //строчку баланс убрал, по умолчанию будет 0 значение
+        //this.balance = balance; //если закомментить то баланс тоже будет 0 при создании
+    }
 
     @Override
     public void setBalance(long balance) {
@@ -9,7 +15,7 @@ public class CreditAcc extends Account {
 
     @Override
     public long add(long amount) {
-        if (balance + amount <= 0) {
+        if (balance + amount <= 0) {  //условие пополнения, нельзя допустить положительный баланс
             balance += amount;
             System.out.println(balance <= 0); //пополнение true, баланс всё равно отрицательный
             return balance;
