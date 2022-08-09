@@ -14,7 +14,7 @@ public class Main {
         System.out.println("==========блок завершен==================");
 
         CheckingAccount check = new CheckingAccount();
-        check.setParameters("Сохранников", 10_000);
+        check.setParameters("Расчетников", 10_000);
         check.getMinBalance();
         check.pay(10_000); //снятие true
         check.pay(10_000); //снятие false, нельзя уходить в минус
