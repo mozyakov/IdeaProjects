@@ -1,18 +1,11 @@
 package accounts;
-
 class Account {
     protected String name;
     protected long balance;
 
-    Account() {
-    }
+    Account() {}
 
     Account(String name, long balance) {
-        this.name = name;
-        this.balance = balance;
-    }
-
-    public void setParameters(String name, long balance) { //в одном методе несколько параметров
         this.name = name;
         this.balance = balance;
     }
@@ -23,9 +16,11 @@ class Account {
     public void setBalance(long balance) {
         this.balance = balance;
     }
+
     public void getBalance() {
         System.out.println("Баланс счета: " + balance);
     }
+
     public void getName() {
         System.out.println("имя счета: " + name);
     }

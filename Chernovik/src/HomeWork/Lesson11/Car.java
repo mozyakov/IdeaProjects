@@ -13,11 +13,11 @@ public class Car {
     } */
 }
 class CarTest{
-    //public static void changeDoors(Car car) { //меняю кол-во дверей но условия задачи другие
-        //car.countDoors += 2;
-    //}
-    static void changeCountDoors(Car c, int countDoors) {
-        c.countDoors = countDoors;
+    /*public static void changeDoors(Car car) { //меняю кол-во дверей внутри метода, но условия задачи другие
+        car.countDoors += 2;                    //по условиям надо менять через параметры метода
+    }*/
+    static void changeCountDoors(Car car, int countDoors) {
+        car.countDoors = countDoors;
     }
     static void changeColor(Car car1, Car car2) { //меняю цвет у объектов
         String color = car1.color;
@@ -27,17 +27,14 @@ class CarTest{
     public static void main(String[] args) {
         Car lada = new Car("white", "V4", 2);
         Car volga = new Car("black", "V4", 4);
-        System.out.println("lada color : " + lada.color);
-        System.out.println("lada countDoors : "  + lada.countDoors);
-        System.out.println("volga color : " + volga.color);
-        System.out.println("volga countDoors : "  + volga.countDoors);
+        System.out.println("Лада цвет:" + lada.color + " кол-во дверей:"  + lada.countDoors);
+        System.out.println("Волга цвет:" + volga.color + " кол-во дверей:"  + volga.countDoors);
         System.out.println("=====ниже изменения=====");
 
         changeCountDoors(lada, 4); //меняю кол-во дверей
         changeColor(lada, volga);  //меняю цвета машин между собой
-        System.out.println("lada color : "  + lada.color);
-        System.out.println("lada countDoors : "  + lada.countDoors);
-        System.out.println("volga color : "  + volga.color);
-        System.out.println("volga countDoors : "  + volga.countDoors);
+
+        System.out.println("Лада цвет:" + lada.color + " кол-во дверей:"  + lada.countDoors);
+        System.out.println("Волга цвет:" + volga.color);
     }
 }

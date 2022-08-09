@@ -2,11 +2,6 @@ package accounts;
 
 public class CreditAccount extends Account {
 
-    @Override
-    public void setParameters(String name, long balance) { //в одном методе несколько параметров
-        this.name = name; //строчку баланс убрал, по умолчанию будет 0 значение
-        //this.balance = balance; //если закоментить строку, то баланс тоже будет 0 при создании
-    }
 
     @Override
     public void setBalance(long balance) {
