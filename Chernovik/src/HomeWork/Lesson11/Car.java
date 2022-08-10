@@ -36,5 +36,17 @@ class CarTest{
 
         System.out.println("Лада цвет:" + lada.color + " кол-во дверей:"  + lada.countDoors);
         System.out.println("Волга цвет:" + volga.color);
+
+
+        Car c1 = new Car("red", "V4", 2);
+        Car c2 = new Car("red", "V4", 2);
+        Car c3 = c2;
+        System.out.println(c1 == c2);       //false птмчто это два РАЗНЫХ объекта просто с = значениями
+        System.out.println(c1.equals(c2));  //falce
+        System.out.println(c1.color == c2.color);      //true птмчто мы = их одинаковые значения
+        System.out.println(c1.color.equals(c2.color)); //true
+        System.out.println("========================");
+        System.out.println(c2 == c3);       //true
+        System.out.println(c2.equals(c3));  //true
     }
 }
