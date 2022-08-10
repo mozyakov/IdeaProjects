@@ -1,6 +1,6 @@
 package Lesson13_switch;
 
-public class Test1 {
+class Test1 {
 }
 class Student {
     String color;
