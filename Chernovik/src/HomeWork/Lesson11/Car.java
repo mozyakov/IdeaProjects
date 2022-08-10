@@ -36,6 +36,7 @@ class CarTest{
 
         System.out.println("Лада цвет:" + lada.color + " кол-во дверей:"  + lada.countDoors);
         System.out.println("Волга цвет:" + volga.color);
+        System.out.println("========================");
 
 
         Car c1 = new Car("red", "V4", 2);
