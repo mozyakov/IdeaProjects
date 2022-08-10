@@ -5,7 +5,7 @@ public class CreditAccount extends Account {
 
     @Override
     public void setBalance(long balance) {
-        this.balance = balance - balance; //обнуляем баланс при создании объекта
+        this.balance = balance - balance; //баланс будет 0, игнорируя сумму пользователя
     }
 
     @Override

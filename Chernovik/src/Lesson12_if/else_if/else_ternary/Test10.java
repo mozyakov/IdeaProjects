@@ -6,12 +6,19 @@ public class Test10 {
         boolean b = true;
         if(salary < 200) {
             System.out.println("ЗП очень низкая");
-        }else if(salary < 400) {
+        }else if(salary < 400 && b == false || !true) {
             System.out.println("ЗП средняя");
         }else if(salary < 600) {
             System.out.println("ЗП высокая");
         }else {
             System.out.println("ЗП очень высокая");
         }
+
+        String s = "mama";
+        System.out.println(s.equals("mama"));
+
+
+
+
     }
 }

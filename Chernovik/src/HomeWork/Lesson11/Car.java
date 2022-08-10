@@ -16,10 +16,10 @@ class CarTest{
     /*public static void changeDoors(Car car) { //меняю кол-во дверей внутри метода, но условия задачи другие
         car.countDoors += 2;                    //по условиям надо менять через параметры метода
     }*/
-    static void changeCountDoors(Car car, int countDoors) {
+    static void changeCountDoors(Car car, int countDoors) { //изменение кол-во дверей в параметрах метода
         car.countDoors = countDoors;
     }
-    static void changeColor(Car car1, Car car2) { //меняю цвет у объектов
+    static void changeColor(Car car1, Car car2) { //изменение цвета между двумя объектами
         String color = car1.color;
         car1.color = car2.color;
         car2.color = color;
