@@ -20,7 +20,6 @@ public class Student {
         s1.name = "Vasiliy";
     }
 
-
     public static void main(String[] args) {
         Student st1 = new Student("Ivan", 3, 9.5);
         Student st2 = new Student("Petr", 1, 5.3 );
@@ -31,7 +30,4 @@ public class Student {
         System.out.println(st2.name);
 
     }
-
-
-
 }
