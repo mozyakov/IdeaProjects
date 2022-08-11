@@ -31,7 +31,7 @@ public class Month {
     public static void main(String[] args) {
         Month.countsDayOfMonth(2);  //вызов метода из класса
         countsDayOfMonth(1);  //вызов метода напрямую
-        Month.countsDayOfMonth(44);  
+        Month.countsDayOfMonth(44);
         countsDayOfMonth(-5);
     }
 }
