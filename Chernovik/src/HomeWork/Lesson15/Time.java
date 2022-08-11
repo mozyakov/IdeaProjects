@@ -1,18 +1,20 @@
-package HomeWork.Lesson14;
+package HomeWork.Lesson15;
 
 public class Time {
 
     static void time() {   //показ времени в формате чч:мм:cc
         OUTER:for (int hour = 0; hour < 6; hour++) {
+
             MIDDLE:for (int min = 0; min < 60; min++) {
-                //if (hour > 1 && min % 10 == 0) { //часть про минуты не срабатывает!
+
                 if (hour > 1 && min % 10 == 0) { //часть про минуты не срабатывает!
                     break;
                 }
+                
                 INNER:for (int sec = 0; sec < 60; sec++) {
-                    //if (sec*hour > min) {
-                        //continue;
-                    //}
+                    if (sec*hour > min) {
+                    continue;
+                    }
                     System.out.println(hour + ":" + min + ":" + sec);
                 }
             }
