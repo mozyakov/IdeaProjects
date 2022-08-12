@@ -1,5 +1,5 @@
 package HomeWork.Lesson15;
-public class TimeNew {
+public class TimeNew_while_and_do_while {
     public static void time() {   //показ времени в формате чч:мм:cc
         int hour = 0;
         OUTER:
