@@ -2,7 +2,6 @@ package HomeWork.Lesson15;
 public class TimeNew {
     public static void time() {   //показ времени в формате чч:мм:cc
         int hour = 0;
-
         OUTER:
         while (hour < 6) {
             int min = -1;
@@ -22,11 +21,12 @@ public class TimeNew {
                     }
                     System.out.println(hour + ":" + min + ":" + sec);
                     sec++;
+                } //граница inner
 
-                }
-            } while (min < 59);
+            } while (min < 59); //граница middle
+
             hour++;
-        }
+        } //граница outer
     }
 
 
