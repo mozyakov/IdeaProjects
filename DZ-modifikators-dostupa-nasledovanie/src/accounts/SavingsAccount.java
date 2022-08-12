@@ -8,14 +8,15 @@ public class SavingsAccount extends Account { //накопительный сч�
     }
 
     @Override
-    public long pay(long amount) {
+    public boolean pay(long amount) {
         long oldBalance = balance;
         if (balance - amount >= minBalance) {
             balance -= amount;
             System.out.println(oldBalance > balance); //снятие прошло, поэтому true
+            return true;
         } else {
-            System.out.println(2 == 1); //снятие не прошло, пишу так чтоб показать false
+            System.out.println(oldBalance != balance); //снятие не прошло, пишу так чтоб показать false
+            return false;
         }
-        return balance;
     }
 }

@@ -24,16 +24,16 @@ class Account {
     public void getName() {
         System.out.println("имя счета: " + name);
     }
-    public long add(long amount) {
+    public boolean add(long amount) {
         long oldBalance = balance;
         balance += amount;
         System.out.println(oldBalance < balance); //true, при пополнении старый всегда меньше теперешнего
-        return balance;
+        return true;
     }
-    public long pay(long amount) {
+    public boolean pay(long amount) {
         long oldBalance = balance;
         balance -= amount;
         System.out.println(oldBalance > balance); //true, при снятии старый всегда больше теперешнего
-        return balance;
+        return true;
     }
 }

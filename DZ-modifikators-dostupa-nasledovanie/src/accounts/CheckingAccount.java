@@ -8,14 +8,15 @@ public class CheckingAccount extends Account { //расчётный счет
     }
 
     @Override
-    public long pay(long amount) {
+    public boolean pay(long amount) {
         long oldBalance = balance;
         if (amount <= balance) {
             balance -= amount;
             System.out.println(oldBalance > balance); //снятие прошло, поэтому true
+            return true;
         } else {
-            System.out.println(2 == 1); //снятие не прошло, баланс до и сейчас равны, но нужен false поэтому пишу от обратного
+            System.out.println(oldBalance != balance); //снятие не прошло, баланс до и сейчас равны, но нужен false поэтому пишу от обратного
+            return false;
         }
-        return balance;
     }
 }

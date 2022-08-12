@@ -9,14 +9,15 @@ public class CreditAccount extends Account {
     }
 
     @Override
-    public long add(long amount) {
-        if (balance + amount <= 0) {  //условие пополнения, нельзя допустить положительный баланс
+    public boolean add(long amount) {
+        if (balance + amount <= 0) {
             balance += amount;
             System.out.println(balance <= 0); //пополнение true, баланс всё равно отрицательный
+            return true;
         } else {
-            System.out.println(2 == 1); //пополнение false, пишу неверно чтоб вернуть false
+            System.out.println(balance > 0); //пополнение false, пишу заведомо неверное чтоб получить false
+            return true;
         }
-        return balance;
     }
 }
 
