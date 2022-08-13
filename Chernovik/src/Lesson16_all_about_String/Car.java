@@ -1,4 +1,4 @@
-package Lesson16_String;
+package Lesson16_all_about_String;
 
 public class Car {
     String color;
