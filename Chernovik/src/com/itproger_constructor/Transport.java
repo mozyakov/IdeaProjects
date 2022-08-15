@@ -6,17 +6,17 @@ public class Transport {
     private byte[] coordinate = {0, 0, 0};
 
 
-    Transport (int weight, byte[] coordinate) {
-        this.speed = speed;
-        this.coordinate = coordinate;
-        System.out.println("object created");
-        System.out.println(getValues());
-    }
     Transport (double speed, int weight) {
         this.speed = speed;
         this.weight = weight;
         System.out.println("object created");
-        System.out.println(getValues());
+        //System.out.println(getValues());
+    }
+    Transport (int weight, byte[] coordinate) {
+        this.weight = weight;
+        this.coordinate = coordinate;
+        System.out.println("object created");
+        //System.out.println(getValues());
     }
     Transport (double speed, int weight, String color) {
         System.out.println("object created");
@@ -37,8 +37,8 @@ public class Transport {
     }
 
     public String getValues() {
-        String info = ("obj.speed=" + speed + " obj.weight=" + weight + " obj.color=" + color +"\n");
-        String infoCoordinates = "Coordinates:";
+        String info = ("obj.speed: " + speed + "   obj.weight: " + weight + "   obj.color: " + color +"\n");
+        String infoCoordinates = "Coordinates: ";
 
         for(int i = 0; i < coordinate.length; i++) {
             infoCoordinates += coordinate[i] + ", ";

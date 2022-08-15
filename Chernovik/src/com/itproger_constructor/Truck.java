@@ -14,14 +14,24 @@ public class Truck extends Transport{
         super(speed, weight);
     }
 
-    public void setLoaded(boolean loaded) {
-        isLoaded = loaded;
+    public void setValues(double speed, int weight, String color, byte[] coordinate, boolean isLoaded) {
+        super.setValues(speed, weight, color, coordinate);
+        this.isLoaded = isLoaded;
+        System.out.println("Наш второй метод");
     }
-    public void getLoaded() {
+
+    @Override
+    public String getValues() {
+        System.out.println(super.getValues());
+        return getLoaded();
+    }
+
+    public void setLoaded(boolean loaded) {isLoaded = loaded;}
+    public String getLoaded() {
         if(isLoaded == true) {
-            System.out.println("грузовик загружен");
+            return "грузовик загружен";
         }else {
-            System.out.println("грузовик не загружен");
+            return "грузовик не загружен";
         }
     }
 
