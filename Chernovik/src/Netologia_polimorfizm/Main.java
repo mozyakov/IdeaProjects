@@ -1,18 +1,24 @@
 package Netologia_polimorfizm;
 
 public class Main {
-    public static void main(String[] args) {
-        Singer singer = new Singer("Tanya", 15, 4);
-        if(checkPerson(singer));
+    public static void main(String[] args) throws Exception {
+        Instrument[] instruments = {
+                new Guitar(),
+                new Piano(),
+                new Flute(),
+                new Guitar()
+        };
 
-    }
+        boolean[][] shouldPlay = {
+                {false, true, true, true, true, false},
+                {true, false, true, false, true, false},
+                {false, false, true, true, false, false},
+                {false, true, true, true, true, false}
+        };
 
-    public static boolean checkPerson(Person person) {
-        if(person.getAge() < 18) {
-            return false;
-        }else {
-            return true;
-        }
-        //return person.getAge() >= 18; // можно было так в одну строку
+    Song song = new Song(instruments, shouldPlay);
+    song.play();
+
+
     }
 }

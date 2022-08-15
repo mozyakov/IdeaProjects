@@ -6,13 +6,15 @@ public class Time {
         OUTER:for (int hour = 0; hour < 6; hour++) {
             MIDDLE:for (int min = 0; min < 60; min++) {
                 if (hour > 1 && min % 10 == 0) { //часть про минуты не срабатывает!
+                    System.out.println(hour + ":" + min);
                     break OUTER;
                 }
                 INNER:for (int sec = 0; sec < 60; sec++) {
                     if (sec*hour > min) {
+                        //System.out.println(hour + ":" + min + ":" + sec);
                         continue;
                     }
-                    System.out.println(hour + ":" + min + ":" + sec);
+                    //System.out.println(hour + ":" + min + ":" + sec);
                 }
             }
         }
