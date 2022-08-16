@@ -4,6 +4,7 @@ public class BankAccount {
     int id = 10;            //эти три параметра по-умолчанию
     String name = "Petr";
     double balance = 100;
+    BankAccount(){};
 
     double popolnenieScheta(double popolnenie) {
         balance += popolnenie;
@@ -18,8 +19,8 @@ public class BankAccount {
 
 class BankAccountTest {
     public static void main(String[] args) {
-        BankAccount MyAccount = new BankAccount();
-        BankAccount HisAccount = new BankAccount();
+        BankAccount2 MyAccount = new BankAccount2();
+        BankAccount2 HisAccount = new BankAccount2();
 
         MyAccount.id = 1;
         //MyAccount.name = "Zaur"; //теперь при выводе этого объекта здесь будет имя по-умолчанию

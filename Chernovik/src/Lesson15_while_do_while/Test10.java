@@ -8,14 +8,7 @@ public class Test10 {
             INNER:while(min < 60) {
                 System.out.println(hour + ":" + min);
                 min++;
-
-
-
             }
-
-
-
-
         }
     }
 }

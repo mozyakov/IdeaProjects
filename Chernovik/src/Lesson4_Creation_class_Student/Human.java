@@ -3,7 +3,7 @@ package Lesson4_Creation_class_Student;
 public class Human { //создал класс с перечислением характеристик
     String name;
     Car3 car;
-    BankAccount ba;
+    BankAccount2 ba;
 
     void info() {
         System.out.println("Имя:"+name+" Цвет машины:"+car.color+" Баланс счета:"+ba.balance);
@@ -15,7 +15,7 @@ class HumanTest {
         Human h = new Human();  //создаем человека с определенными параметрами
         h.name = "David";
         h.car = new Car3("red", "V8");
-        h.ba = new BankAccount(18, 200.50);
+        h.ba = new BankAccount2(18, 200.50);
         h.info();
     }
 }
@@ -29,11 +29,23 @@ class Car3 {
     String engine;
 }
 
-class BankAccount {
-    BankAccount(int id2, double balance2) {
+class BankAccount2 {
+    public String name;
+
+    BankAccount2(int id2, double balance2) {
         id = id2;
         balance = balance2;
     }
     int id;
     double balance;
+
+    public BankAccount2() {
+
+    }
+
+    public void popolnenieScheta(int i) {
+    }
+
+    public void snyatieSoScheta(int i) {
+    }
 }
