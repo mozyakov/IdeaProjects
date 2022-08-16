@@ -1,4 +1,4 @@
-package Education_Java;
+package Lesson4_Creation_class_Student;
 
 public class Car {
     Car(String cvet, String motor ) { //создаю коструктор

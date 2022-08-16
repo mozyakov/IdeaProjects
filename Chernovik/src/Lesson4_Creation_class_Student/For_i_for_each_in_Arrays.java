@@ -1,4 +1,4 @@
-package Education_Java;
+package Lesson4_Creation_class_Student;
 import java.util.Arrays;
 public class For_i_for_each_in_Arrays {
     public static void main(String[] args) {

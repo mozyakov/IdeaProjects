@@ -1,4 +1,4 @@
-package Education_Java;
+package Lesson4_Creation_class_Student;
 
 public class Test20 {
     int summa(int a, int b, int c) { //это input

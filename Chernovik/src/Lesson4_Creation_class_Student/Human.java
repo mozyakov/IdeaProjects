@@ -1,4 +1,4 @@
-package Education_Java;
+package Lesson4_Creation_class_Student;
 
 public class Human { //создал класс с перечислением характеристик
     String name;
