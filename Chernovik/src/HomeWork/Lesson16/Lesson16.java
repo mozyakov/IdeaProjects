@@ -9,13 +9,13 @@ public class Lesson16 {    //сделал как в лекции, но у мен
             a = s.indexOf('@', c);
             b = s.indexOf('.', c);
             c = s.indexOf(';', c + 1);
-            System.out.println(s.substring(a + 1, b));
-
+            System.out.println(s.substring(a + 1, b));;
         }
+
     }
     public static void main (String[]args){
         Lesson16 l16 = new Lesson16();
-        l16.email("ya@yahoo.com;   on@mail.ru;     ona@gmail.com");
+        l16.email("ya@yahoo.com; on@mail.ru; ona@gmail.com");
     }
 }
 

@@ -30,4 +30,5 @@ public class Book { //создали класс и объявили его па�
     public void append(String moreText) { //метод добавления текста
         text += moreText;
     }
+
 }
