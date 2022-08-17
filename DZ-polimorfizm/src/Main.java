@@ -45,13 +45,13 @@ public class Main {
 
 
         //client1.add(new Account()); //добавляем счет
-       // System.out.println(Arrays.toString(client1.accounts)); //массив со счетами клиента
+        // System.out.println(Arrays.toString(client1.accounts)); //массив со счетами клиента
         //System.out.println(Arrays.toString(client1.accounts));
         //client1.getCountAccounts();  //сколько счетов у клиента
         //System.out.println(Arrays.toString(client1.accounts));
         //client1.add(new Account()); //добавляем счет
         //client1.add(new Account()); //добавляем счет будет отказ - у клиента уже три счета
-       // System.out.println(client1.pay(5000));
+        // System.out.println(client1.pay(5000));
 
 
     }
