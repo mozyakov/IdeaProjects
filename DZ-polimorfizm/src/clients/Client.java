@@ -4,13 +4,15 @@ import accounts.Account;
 public class Client {
     protected String name;
     protected int countAccounts = 0;
-    //public String [] accounts = new String[]{"empty", "empty", "empty"};
-    //public String [] accounts = new String[3];
     public Account [] accounts = new Account[3];
 
     public Client(int accounts) {
         this.accounts = new Account[3];
-        System.out.println("new клиент, 0 счетов, макс/ кол-во счетов:3");
+        System.out.println("Клиент создан, сейчас счетов " + countAccounts);
+        System.out.println("Mакс. кол-во счетов : 3");
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void getName() {
@@ -20,59 +22,26 @@ public class Client {
         System.out.println("кол-во счетов "+ countAccounts);
     }
 
-    public void add(Account account) {
+    public void add(Account account) {    //добавление счета
         for (int i = 0; i < accounts.length; i++) {
             if (accounts[i] == null) {
                 accounts[i] = account;
                 countAccounts +=1;
+                System.out.println("Счет открыт, кол-во счетов " + countAccounts );
                 return;
             }
         }
-        // если дошли сюда, значит не нашлось свободной ячейки, иначе бы уже ушли из for
+        // если дошли сюда значит открыто макс.кол-во счетов
         System.out.println("Мест для добавления нового счёта нет!");
     }
-
-    /*public void add(String account) {
-        for (int i = 0; i < accounts.length; i++) {
-            if (accounts[i] == null) {
-                accounts[i] = account;
-                countAccounts +=1;
-                return;
-            }
-        }
-        // все ячейки заняты
-        System.out.println("у вас уже макс.кол-во счетов");
-    }*/
 
     public boolean pay(int amount) {
         for (int i = 0; i < accounts.length; i++) {
             if (accounts[i] != null) {
-                accounts[i] = null; //раз счет использовался - он израсходован
-                return true;
-
-            } else if(accounts[i] == null) {
-                return false;
-            }
-        }return true;
-    }
-
-    /*  вариант со стриннгами мой
-        public boolean pay(int amount) {
-        for (int i = 0; i < accounts.length; i++) {
-            if (accounts[i] == "accounts") {
                 return true;
             } else if(accounts[i] == null) {
                 return false;
             }
         }return true;
     }
-     */
-    /*public void add(int i) {  //метод добавления счета
-        if(countAccounts < 3 && countAccounts + i <= 3) {
-            countAccounts += i;
-        }else {
-            System.out.println("у клиента уже макс.кол-во счетов(3)");
-        }
-    }
-    */
 }
