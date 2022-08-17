@@ -3,7 +3,9 @@ class Account {
     protected String name;
     protected long balance;
 
-    Account() {}
+    Account() {
+        System.out.println("Сейчас у вас ноль счетов, максимальное кол-во счетов 3");
+    }
 
     Account(String name, long balance) {
         this.name = name;
