@@ -1,5 +1,5 @@
 import accounts.*;   //импорт всех классов из пакета
-import clients.Client;
+import clients.*;
 import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
@@ -30,28 +30,36 @@ public class Main {
         cred.add(20_000); //пополнение false, иначе баланс станет положительным
          */
 
-        Client client1 = new Client(3);
-        //client1.getCountAccounts();  //сколько счетов у клиента
-        System.out.println(Arrays.toString(client1.accounts));
-        System.out.println(client1.pay(5000));  //false - нет открытого счета
-        client1.add(new Account()); //добавляем счет
-        client1.add(new Account()); //добавляем счет
-        client1.add(new Account()); //добавляем счет
-        System.out.println(Arrays.toString(client1.accounts));
-        client1.getCountAccounts();  //сколько счетов у клиента
-        System.out.println(client1.pay(5000));  //true - счет есть
-        client1.getCountAccounts();  //сколько счетов у клиента
-        System.out.println(Arrays.toString(client1.accounts));
+        Client client = new Client(5); //
+        client.setName("Petr");
+        //client.getCountAccounts();  //сколько счетов у клиента
+        //System.out.println(Arrays.toString(client.accounts));
+        client.getAccount();
+        System.out.println(client.pay(5000));  //false - нет открытого счета
+        client.add(new Account()); //добавляем счет
+        client.add(new Account()); //добавляем счет
+        client.add(new Account()); //добавляем счет
+        client.getAccount();
+        client.getCountAccounts();  //сколько счетов у клиента
+        System.out.println(client.pay(5000));  //true - счет есть
+        client.getAccount();
+        client.getCountAccounts();  //сколько счетов у клиента
+        System.out.println(client.pay(5000));
+        client.getAccount();
+        client.getCountAccounts();  //сколько счетов у клиента
+        System.out.println(client.pay(5000));
+        client.getAccount();  //все счета истрачены должно стать null везде
+        System.out.println(client.pay(5000));   //false счета уже истрачены
 
 
-        //client1.add(new Account()); //добавляем счет
-       // System.out.println(Arrays.toString(client1.accounts)); //массив со счетами клиента
-        //System.out.println(Arrays.toString(client1.accounts));
-        //client1.getCountAccounts();  //сколько счетов у клиента
-        //System.out.println(Arrays.toString(client1.accounts));
-        //client1.add(new Account()); //добавляем счет
-        //client1.add(new Account()); //добавляем счет будет отказ - у клиента уже три счета
-       // System.out.println(client1.pay(5000));
+        //client.add(new Account()); //добавляем счет
+       // System.out.println(Arrays.toString(client.accounts)); //массив со счетами клиента
+        //System.out.println(Arrays.toString(client.accounts));
+        //client.getCountAccounts();  //сколько счетов у клиента
+        //System.out.println(Arrays.toString(client.accounts));
+        //client.add(new Account()); //добавляем счет
+        //client.add(new Account()); //добавляем счет будет отказ - у клиента уже три счета
+       // System.out.println(client.pay(5000));
 
 
     }
