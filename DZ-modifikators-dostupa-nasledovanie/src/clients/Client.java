@@ -62,8 +62,8 @@ public class Client {
                 return false;
             }
             else if(accounts[i] != null) {
-                countAccounts -=1;   //есть счет найден, то он расходуется
-                accounts[i] = null;  //в использованную ячейку пишется null
+                countAccounts -=1;   //есть счет найден, то он расходуется, но по условиям это лишнее
+                accounts[i] = null;  //в использованную ячейку пишется null, но по условиям это лишнее
                 return true;
             }
         }return false;
