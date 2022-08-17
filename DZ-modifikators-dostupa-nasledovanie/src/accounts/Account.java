@@ -4,7 +4,7 @@ public class Account {
     protected String name;
     protected long balance;
     //protected int[] accounts = new int[3];
-    //public Account [] accounts = new Account[3];
+    public Account [] accounts = new Account[3];
 
 
     public Account() {}

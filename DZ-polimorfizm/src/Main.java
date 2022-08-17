@@ -21,5 +21,6 @@ public class Main {
 
         client.getCountAccounts();  //сколько счетов у клиента
         System.out.println(client.pay(5000));  //true - есть открытые счета
+
     }
 }
