@@ -1,10 +1,13 @@
 package accounts;
-class Account {
+public class Account {
     protected String name;
     protected long balance;
+    //protected int[] accounts = new int[3];
+    //protected Account [] accounts = new Account[3];
 
-    Account() {
-        System.out.println("Сейчас у вас ноль счетов, максимальное кол-во счетов 3");
+
+    public Account() {
+        System.out.println("Сейчас нет счетов, макс. кол-во счетов 3");
     }
 
     Account(String name, long balance) {

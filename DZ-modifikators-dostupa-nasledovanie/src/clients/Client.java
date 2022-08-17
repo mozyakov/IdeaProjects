@@ -1,29 +1,82 @@
 package clients;
+import accounts.Account;
 
 public class Client {
     protected String name;
     protected int countAccounts = 0;
-    protected int[] account = new int[3];
+    //public String [] accounts = new String[]{"empty", "empty", "empty"};
+    //public String [] accounts = new String[3];
+    public Account [] accounts = new Account[3];
 
-    public Client() {
-        System.out.println("Максимальное кол-во счетов которое вы можете завести : 3");
-    };
-    //public Client(String name, int countMax) {
-        //this.name = name;
-        //this.countMax = countMax;
-    //}
-
-    public void setName(String name) {
-        this.name = name;
+    public Client(int accounts) {
+        this.accounts = new Account[3];
+        System.out.println("создан клиент, сейчас нет счетов");
+        System.out.println("максимальное кол-во счетов : 3");
     }
-    //public void setCountMax(int countMax) {
-        //this.countMax = countMax;
-    //}
+    //public Client() {};
+    /*public void setName(String name) {
+        this.name = name;
+    }*/
     public void getName() {
         System.out.println("имя клиента : " + name);
     }
     public void getCountAccounts() {
-        System.out.println("у клиента " + name  + " кол-во счетов "+ countAccounts);
+        System.out.println("кол-во счетов клиента "+ countAccounts);
     }
 
+    public void add(Account account) {
+        for (int i = 0; i < accounts.length; i++) {
+            if (accounts[i] == null) {
+                accounts[i] = account;
+                countAccounts +=1;
+                return;
+            }
+        }
+        // если дошли сюда, значит не нашлось свободной ячейки, иначе бы уже ушли из for
+        System.out.println("Мест для добавления нового счёта нет! :(");
+    }
+
+    /*public void add(String account) {
+        for (int i = 0; i < accounts.length; i++) {
+            if (accounts[i] == null) {
+                accounts[i] = account;
+                countAccounts +=1;
+                return;
+            }
+        }
+        // все ячейки заняты
+        System.out.println("у вас уже макс.кол-во счетов");
+    }*/
+
+    public boolean pay(int amount) {
+        for (int i = 0; i < accounts.length; i++) {
+            if (accounts[i] != null) {
+                accounts[i] = null;
+                return true;
+
+            } else if(accounts[i] == null) {
+                return false;
+            }
+        }return true;
+    }
+
+    /*  вариант со стриннгами мой
+        public boolean pay(int amount) {
+        for (int i = 0; i < accounts.length; i++) {
+            if (accounts[i] == "accounts") {
+                return true;
+            } else if(accounts[i] == null) {
+                return false;
+            }
+        }return true;
+    }
+     */
+    /*public void add(int i) {  //метод добавления счета
+        if(countAccounts < 3 && countAccounts + i <= 3) {
+            countAccounts += i;
+        }else {
+            System.out.println("у клиента уже макс.кол-во счетов(3)");
+        }
+    }
+    */
 }

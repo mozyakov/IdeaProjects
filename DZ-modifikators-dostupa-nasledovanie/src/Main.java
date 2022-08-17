@@ -1,6 +1,6 @@
 import accounts.*;   //импорт всех классов из пакета
 import clients.Client;
-
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         /*SavingsAccount saving = new SavingsAccount();
@@ -30,10 +30,26 @@ public class Main {
         cred.add(20_000); //пополнение false, иначе баланс станет положительным
          */
 
-        Client client1 = new Client();
-        client1.setName("Первый");
-        client1.getName();
-        client1.getCountAccounts();
+        Client client1 = new Client(3);
+        client1.getCountAccounts();  //сколько счетов у клиента
+        System.out.println(Arrays.toString(client1.accounts));
+        System.out.println(client1.pay(5000));  //false - нет открытого счета
+        client1.add(new Account()); //добавляем счет
+        System.out.println(Arrays.toString(client1.accounts));
+        client1.getCountAccounts();  //сколько счетов у клиента
+        System.out.println(client1.pay(5000));  //false - нет открытого счета
+        client1.getCountAccounts();  //сколько счетов у клиента
+
+        
+        //client1.add(new Account()); //добавляем счет
+       // System.out.println(Arrays.toString(client1.accounts)); //массив со счетами клиента
+        //System.out.println(Arrays.toString(client1.accounts));
+        //client1.getCountAccounts();  //сколько счетов у клиента
+        //System.out.println(Arrays.toString(client1.accounts));
+        //client1.add(new Account()); //добавляем счет
+        //client1.add(new Account()); //добавляем счет будет отказ - у клиента уже три счета
+       // System.out.println(client1.pay(5000));
+
 
     }
 }
