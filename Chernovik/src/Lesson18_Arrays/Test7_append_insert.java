@@ -1,6 +1,6 @@
 package Lesson18_Arrays;
 
-public class Test7 {
+public class Test7_append_insert {
     public static void main(String[] args) {
         char[] array = {'p', 'r', 'i', 'v', 'e', 't'};
         String s = new String(array);
