@@ -1,5 +1,7 @@
 package clients;
 import accounts.Account;
+import accounts.CheckingAccount;
+import accounts.SavingsAccount;
 
 public class Client {
     protected String name;
@@ -38,10 +40,22 @@ public class Client {
     public boolean pay(int amount) {
         for (int i = 0; i < accounts.length; i++) {
             if (accounts[i] != null) {
+                CheckingAccount.pay();
                 return true;
             } else {
                 return false;
             }
         }return true;
     }
+    /* резерв
+        public boolean pay(int amount) {
+        for (int i = 0; i < accounts.length; i++) {
+            if (accounts[i] != null) {
+                return true;
+            } else {
+                return false;
+            }
+        }return true;
+    }
+     */
 }
