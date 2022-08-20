@@ -4,7 +4,6 @@ public class SavingsAccount extends Account { //накопительный сч�
     protected long minBalance = 1_000;
 
 
-
     public void getMinBalance() {
         System.out.println("Мин.баланс = " + minBalance);
     }

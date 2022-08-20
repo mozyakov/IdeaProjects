@@ -1,4 +1,5 @@
 package clients;
+
 import accounts.Account;
 import accounts.CheckingAccount;
 import accounts.SavingsAccount;
@@ -6,13 +7,14 @@ import accounts.SavingsAccount;
 public class Client {
     protected String name;
     protected int countAccounts = 0;
-    public Account [] accounts = new Account[3];
+    public Account[] accounts = new Account[3];
 
     public Client(int accounts) {
         this.accounts = new Account[3];
         System.out.println("Клиент создан, сейчас счетов " + countAccounts);
         System.out.println("Mакс. кол-во счетов : 3");
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -20,16 +22,17 @@ public class Client {
     public void getName() {
         System.out.println("имя клиента : " + name);
     }
+
     public void getCountAccounts() {
-        System.out.println("кол-во счетов "+ countAccounts);
+        System.out.println("кол-во счетов " + countAccounts);
     }
 
     public void add(Account account) {    //добавление счета
         for (int i = 0; i < accounts.length; i++) {
             if (accounts[i] == null) {
                 accounts[i] = account;
-                countAccounts +=1;
-                System.out.println("Счет открыт, кол-во счетов " + countAccounts );
+                countAccounts += 1;
+                System.out.println("Счет открыт, кол-во счетов " + countAccounts);
                 return;
             }
         }
@@ -40,14 +43,15 @@ public class Client {
     public boolean pay(int amount) {
         for (int i = 0; i < accounts.length; i++) {
             if (accounts[i] != null) {
-                CheckingAccount.pay();
+                CheckingAccount.pay(); //добавил метод
                 return true;
             } else {
                 return false;
             }
-        }return true;
+        }
+        return true;
     }
-    /* резерв
+    /* резерв на всякий случай
         public boolean pay(int amount) {
         for (int i = 0; i < accounts.length; i++) {
             if (accounts[i] != null) {
