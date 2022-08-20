@@ -39,7 +39,7 @@ public class Client {
         for (int i = 0; i < accounts.length; i++) {
             if (accounts[i] != null) {
                 return true;
-            } else if(accounts[i] == null) {
+            } else {
                 return false;
             }
         }return true;
