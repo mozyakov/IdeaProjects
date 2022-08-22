@@ -23,18 +23,21 @@ public class Sortirovka_massiva_int_vozrastanio {
         return array;
     }
 
+
     public static void main(String[] args) {
+        int[] arr10 = {11, 4, 8, 1, 6, 0, -7, 7, -7};
+        Arrays.sort(arr10);  //метод сортировки массива по возрастанию (массив в итоге тоже изменится)
+        System.out.println(Arrays.toString(arr10)); //
+
+        System.out.println("============================");
+
         int[] arr1 = {4, 5, 10, 1, 6, 0, -3, 7, -3};
         System.out.println(Arrays.toString(arr1)); //изначальный массив
-        Arrays.sort(arr1);  //метод сортировки массива по возрастанию
-        System.out.println(Arrays.toString(arr1));
-        
-
         sortirovka(arr1);
         for (int i = 0; i < arr1.length; i++) {
             System.out.println(arr1[i]);
         }
-        System.out.println(Arrays.toString(arr1)); //возвращенный массив
+        System.out.println(Arrays.toString(arr1)); //возвращённый массив
         System.out.println("==========================");
 
         int[] arr2 = {5, 3, 6, -1, 4, -1, 2};
