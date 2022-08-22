@@ -1,4 +1,4 @@
-package Lesson19_varargs_loop_forea;
+package Lesson19_varargs_loop_foreach;
 
 public class Test2_Varargs {
     static void summa(int a, int b) {
