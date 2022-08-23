@@ -1,4 +1,4 @@
-package Lesson19_varargs_loop_foreach;
+package Lesson19_varargs_foreach;
 import java.util.Arrays;
 public class Test4_foreach_2_loop_foreach {
     public static void main(String[] args) {

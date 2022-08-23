@@ -1,4 +1,4 @@
-package Lesson19_varargs_loop_foreach;
+package Lesson19_varargs_foreach;
 
 public class Test5 {
     public static void main(String[] args) {

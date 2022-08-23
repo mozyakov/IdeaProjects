@@ -1,4 +1,4 @@
-package Lesson19_varargs_loop_foreach;
+package Lesson19_varargs_foreach;
 import java.util.Arrays;
 
 public class Test6_foreach {
