@@ -3,7 +3,6 @@ package accounts;
 public class SavingsAccount extends Account { //накопительный счет
     protected long minBalance = 1_000;
 
-
     public void getMinBalance() {
         System.out.println("Мин.баланс = " + minBalance);
     }
