@@ -1,25 +1,24 @@
 package Lesson23;
 public  class Test3 {
     public static void main(String[] args) {
-        Employee1 e = new Employee1();
-        e.eat();
-        Teacher1 t = new Teacher1();
-        t.eat();
+        Employee1 e = new Teacher1();
+        e.eat(); //будет кушает учитель, потому что объект создали в тичере
 
     }
 }
 class Eda{}
-class Fructs extends Eda{};
+class Fructs extends Eda{}
+class Jidkost{}
+class Water extends Jidkost{}
 class Employee1 {
     double salary = 100;
     String name = "Kolya";
     int age;
     int exprerience;
-
-    int eat() { //какой тип данных в методе родителя
+    Eda eat() {
         System.out.println("Kushaet rabotnik");
         Eda e = new Eda();
-        return 5;
+        return e;
     }
     void sleep() {
         System.out.println("Spit rabotnik");
@@ -29,14 +28,21 @@ class Employee1 {
 class Teacher1 extends Employee1 {
     int countShcoolar;
     @Override
-    int eat() { //такой же тип данных в методе ребенка
+    Eda eat() { //return type родителя или сабкласс родителя
         System.out.println("Kushaet uchitel");
         Fructs f = new Fructs();
-        return 6;
+        return f;
     }
-    @Override
-    void sleep() {
-        System.out.println("Spit uchitel");
-    }
-
 }
+class A{
+    Employee1 objectCreation() {
+        return new Employee1();
+    }
+}
+class B extends A{
+    @Override
+    Teacher1 objectCreation() {
+        System.out.println("ok");
+        return new Teacher1();
+    }
+};
