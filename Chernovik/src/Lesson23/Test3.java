@@ -1,35 +1,42 @@
 package Lesson23;
+public  class Test3 {
+    public static void main(String[] args) {
+        Employee1 e = new Employee1();
+        e.eat();
+        Teacher1 t = new Teacher1();
+        t.eat();
 
-import java.sql.SQLOutput;
-
-public class Test3 {
+    }
 }
 class Eda{}
-class Fruct extends Eda{}
-
-
-class Employee1{
+class Fructs extends Eda{};
+class Employee1 {
     double salary = 100;
-    String name;
+    String name = "Kolya";
     int age;
-    int experience;
+    int exprerience;
 
-    Eda eat() {
-        System.out.println("Кушает работник");
+    int eat() { //какой тип данных в методе родителя
+        System.out.println("Kushaet rabotnik");
         Eda e = new Eda();
-        return e;
+        return 5;
     }
-
-    void sleep() {System.out.println("Sleep");}
-
+    void sleep() {
+        System.out.println("Spit rabotnik");
+    }
 }
+
 class Teacher1 extends Employee1 {
-    int countSchoolars;
+    int countShcoolar;
     @Override
-    Fruct eat() {
-        System.out.println("Кушает учитель");
-        Fruct f = new Fruct();
-        return f;
+    int eat() { //такой же тип данных в методе ребенка
+        System.out.println("Kushaet uchitel");
+        Fructs f = new Fructs();
+        return 6;
     }
-    void teach() {System.out.println("Teach");}
+    @Override
+    void sleep() {
+        System.out.println("Spit uchitel");
+    }
+
 }
