@@ -43,7 +43,8 @@ public class Client {
     public boolean pay(int amount) {
         for (int i = 0; i < accounts.length; i++) {
             if (accounts[i] != null) {
-                CheckingAccount.pay(); //добавил метод
+                //CheckingAccount.pay(); //добавил метод
+                //здесь надо пополнить счет
                 return true;
             } else {
                 return false;
