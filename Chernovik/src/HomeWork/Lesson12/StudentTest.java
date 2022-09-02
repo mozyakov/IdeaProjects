@@ -1,6 +1,6 @@
 package HomeWork.Lesson12;
 
-import Lesson11_primitive_and_referense_in_method.*;
+import VideoCourse.Lesson11_primitive_and_referense_in_method.*;
 
 public class StudentTest {
     public static void method0(Student ss1, Student ss2) {

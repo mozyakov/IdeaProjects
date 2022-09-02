@@ -5,7 +5,10 @@ public class Test1 {
         Person person = new Person("Petr", 20);
         person.showInfo();
 
-
+        String[] str = {"1", "2", "3"};
+        for(String s: str) {
+            System.out.println(s);
+        }
     }
 }
 
