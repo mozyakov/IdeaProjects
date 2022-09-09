@@ -16,6 +16,9 @@ public class Bus {
     public String getColor() {
         return color;
     }
+    public void infoPassengers() {
+        System.out.println("I am bus and a have 50 passengers");
+    }
 }
 
 class Test {
@@ -33,6 +36,9 @@ class Test {
         for(Bus b: arr) {
             System.out.println(b.getName());
         }
+        bus3.infoPassengers();
+        Bus bus13 = new Car();
+        bus13.infoPassengers(); //сработает метод класса car
     }
 }
 
