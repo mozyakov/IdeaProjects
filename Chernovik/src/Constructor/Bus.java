@@ -39,6 +39,9 @@ class Test {
         bus3.infoPassengers();
         Bus bus13 = new Car();
         bus13.infoPassengers(); //сработает метод класса car
+        Bus bus30 = new Moto();
+        bus30.infoPassengers();
+     
     }
 }
 
