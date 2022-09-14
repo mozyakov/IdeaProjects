@@ -26,9 +26,9 @@ class Test {
         Bus bus1 = new Bus();
         Bus bus2 = new Bus();
         Bus bus3 = new Bus();
-        bus1.setName("ford");
-        bus2.setName("man");
-        bus3.setName("liaz");
+        bus1.setName("Ford");
+        bus2.setName("Man");
+        bus3.setName("Liaz");
         System.out.println(bus1.getName());
         System.out.println(bus1.getColor());
         System.out.println("================");
@@ -41,7 +41,11 @@ class Test {
         bus13.infoPassengers(); //сработает метод класса car
         Bus bus30 = new Moto();
         bus30.infoPassengers();
+        sayHello(bus1.getName());
 
+    }
+    public static void sayHello(String name) {
+        System.out.println("Hello, " + name + "!");
     }
 }
 
